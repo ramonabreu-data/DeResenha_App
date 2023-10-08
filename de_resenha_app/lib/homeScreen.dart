@@ -38,8 +38,8 @@ class _HomeScreenState extends State<HomeScreen> {
               width: 2,
             ),
           ),
-          padding: EdgeInsets.all(15), // Espaçamento interno aumentado
-          minimumSize: Size(150, 150), // Tamanho mínimo dos botões
+          padding: EdgeInsets.all(15),
+          minimumSize: Size(100, 100),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
             Icon(
               icon,
               color: Colors.white,
-              size: 40, // Tamanho do ícone aumentado
+              size: 30,
             ),
             SizedBox(height: 12),
             Text(
@@ -99,14 +99,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     SizedBox(height: 5),
                     GridView.count(
-                      crossAxisCount: 3, // 2 colunas por linha
-                      childAspectRatio: 1, // Proporção dos botões
+                      crossAxisCount: 3,
+                      childAspectRatio: 1,
                       physics: NeverScrollableScrollPhysics(),
                       shrinkWrap: true,
                       children: [
                         _buildButton(
                           text: 'O Complexo',
-                          icon: Icons.home,
+                          icon: Icons.stadium,
                           url: 'https://www.nossoclube.com.br',
                         ),
                         _buildButton(
@@ -116,27 +116,27 @@ class _HomeScreenState extends State<HomeScreen> {
                               'https://wa.me/5586981568628?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+programa+de+s%C3%B3cios+do+EC+Flamengo.+',
                         ),
                         _buildButton(
-                          text: 'Instagram',
-                          icon: Icons.camera_alt,
+                          text: 'Empresas Parceiras',
+                          icon: Icons.add_business,
                           url:
                               'https://instagram.com/ec.flamengopi?igshid=MzRlODBiNWFlZA==',
                         ),
                         _buildButton(
-                          text: 'Produtos Oficiais',
-                          icon: Icons.card_travel,
+                          text: 'Soccer School',
+                          icon: Icons.sports_soccer,
                           url:
                               'https://leao37.lojavirtualnuvem.com.br/?exit_preview_theme_installation=true',
                         ),
                         _buildButton(
-                          text: 'Fan Token - Leão37',
-                          icon: Icons.monetization_on_sharp,
+                          text: 'Localização',
+                          icon: Icons.location_pin,
                           url:
-                              'https://leao37.lojavirtualnuvem.com.br/produtos/leao-37-fan-token/',
+                              'https://www.google.com/maps/place/De+Resenha+Sports+Club/@-5.1216508,-42.8030985,15z/data=!4m6!3m5!1s0x78e37c98488649b:0xceb70ef0a0996c72!8m2!3d-5.1216508!4d-42.8030985!16s%2Fg%2F11h84rbtc4?entry=ttu',
                         ),
                         _buildButton(
-                          text: 'Parceiros',
-                          icon: Icons.thumb_up,
-                          url: '', // Adicione a URL apropriada aqui
+                          text: 'Redes Sociais',
+                          icon: Icons.share,
+                          url: 'https://www.instagram.com/deresenha/',
                         ),
                       ],
                     ),
@@ -153,91 +153,123 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            IconButton(
-              icon: Icon(Icons.home),
-              color: _selectedIndex == 0 ? Colors.white : Colors.grey,
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 0;
-                });
-                // Navegar para a página inicial (HomeScreen)
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                );
-              },
-            ),
-            IconButton(
-              icon: Column(
-                children: [
-                  Icon(Icons.sports_soccer),
-                  Text(
-                    'Jogos',
-                    style: TextStyle(fontSize: 7, color: Colors.white),
-                  ),
-                ],
+            Container(
+              width: 70,
+              child: IconButton(
+                iconSize: 36,
+                icon: Icon(Icons.home),
+                color: _selectedIndex == 0 ? Colors.white : Colors.grey,
+                onPressed: () {
+                  setState(() {
+                    _selectedIndex = 0;
+                  });
+                  // Navegar para a página inicial (HomeScreen)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomeScreen()),
+                  );
+                },
+                tooltip: 'Home',
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(0),
+                splashRadius: 1,
               ),
-              color: _selectedIndex == 2
-                  ? Colors.white
-                  : Color.fromARGB(255, 248, 246, 246),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 2;
-                });
-                // Navegar para a página de TV (TvScreen)
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TvScreen()),
-                );
-              },
             ),
-            IconButton(
-              icon: Column(
-                children: [
-                  Icon(Icons.tv),
-                  Text(
-                    'TV',
-                    style: TextStyle(fontSize: 7, color: Colors.white),
-                  ),
-                ],
+            Container(
+              width: 70,
+              child: IconButton(
+                iconSize: 30,
+                icon: Column(
+                  children: [
+                    Icon(Icons.sports_soccer),
+                    Text(
+                      'Jogos',
+                      style: TextStyle(fontSize: 12, color: Colors.white),
+                    ),
+                  ],
+                ),
+                color: _selectedIndex == 2
+                    ? Colors.white
+                    : Color.fromARGB(255, 248, 246, 246),
+                onPressed: () {
+                  setState(() {
+                    _selectedIndex = 2;
+                  });
+                  // Navegar para a página de Jogos (JogosScreen)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TvScreen()),
+                  );
+                },
+                tooltip: 'Jogos',
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(0),
+                splashRadius: 1,
               ),
-              color: _selectedIndex == 5
-                  ? Colors.white
-                  : Color.fromARGB(255, 248, 246, 246),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 2;
-                });
-                // Navegar para a página de TV (TvScreen)
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TvScreen()),
-                );
-              },
             ),
-            IconButton(
-              icon: Column(
-                children: [
-                  Icon(Icons.group),
-                  Text(
-                    'Sócio',
-                    style: TextStyle(fontSize: 7, color: Colors.white),
-                  ),
-                ],
+            Container(
+              width: 70,
+              child: IconButton(
+                iconSize: 30,
+                icon: Column(
+                  children: [
+                    Icon(Icons.tv),
+                    Text(
+                      'TV',
+                      style: TextStyle(fontSize: 12, color: Colors.white),
+                    ),
+                  ],
+                ),
+                color: _selectedIndex == 3
+                    ? Colors.white
+                    : Color.fromARGB(255, 248, 246, 246),
+                onPressed: () {
+                  setState(() {
+                    _selectedIndex = 3;
+                  });
+                  // Navegar para a página de TV (TvScreen)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => TvScreen()),
+                  );
+                },
+                tooltip: 'TV',
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(0),
+                splashRadius: 1,
               ),
-              color: _selectedIndex == 2
-                  ? Colors.white
-                  : Color.fromARGB(255, 248, 246, 246),
-              onPressed: () {
-                setState(() {
-                  _selectedIndex = 2;
-                });
-                // Navegar para a página de TV (TvScreen)
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SocioScreen()),
-                );
-              },
+            ),
+            Container(
+              width: 70,
+              child: IconButton(
+                iconSize: 30,
+                icon: Column(
+                  children: [
+                    Icon(Icons.group),
+                    Text(
+                      'Sócio',
+                      style: TextStyle(fontSize: 12, color: Colors.white),
+                    ),
+                  ],
+                ),
+                color: _selectedIndex == 4
+                    ? Colors.white
+                    : Color.fromARGB(255, 248, 246, 246),
+                onPressed: () {
+                  setState(() {
+                    _selectedIndex = 4;
+                  });
+                  // Navegar para a página de Sócio (SocioScreen)
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => SocioScreen()),
+                  );
+                },
+                tooltip: 'Sócio',
+                alignment: Alignment.center,
+                padding: EdgeInsets.all(0),
+                splashRadius: 1,
+              ),
             ),
           ],
         ),
