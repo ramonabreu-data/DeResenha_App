@@ -38,6 +38,7 @@ dependencies:
   url_launcher: ^6.1.14
   android_intent: ^2.0.2
   http: ^0.13.4
+  carousel_slider: ^4.2.1
  
 
 dev_dependencies:

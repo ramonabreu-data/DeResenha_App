@@ -44,7 +44,7 @@ class _SocioScreenState extends State<SocioScreen> {
         border: Border.all(color: Colors.white, width: 2.0),
       ),
       child: Card(
-        color: Colors.black,
+        color: Color.fromARGB(255, 10, 49, 158),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),
@@ -57,7 +57,7 @@ class _SocioScreenState extends State<SocioScreen> {
                 width: double.infinity,
                 height: 8.0,
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 64, 185, 8),
                   borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
                 ),
               ),
@@ -68,22 +68,22 @@ class _SocioScreenState extends State<SocioScreen> {
                     Container(
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        border: Border.all(color: Colors.white, width: 2.0),
+                        border: Border.all(color: Color.fromARGB(255, 64, 185, 8), width: 2.0),
                       ),
                       child: CircleAvatar(
                         radius: 60.0,
-                        backgroundColor: Colors.white,
+                        backgroundColor: Color.fromARGB(255, 64, 185, 8),
                         child: Image.network(
-                          'https://upload.wikimedia.org/wikipedia/commons/6/62/EC_Flamengo-PI_%28BRA%29_2023.png',
-                          width: 120,
-                          height: 120,
+                          'https://ramondata.online/img/logoblue.png',
+                          width: 130,
+                          height: 130,
                           alignment: Alignment.center,
                         ),
                       ),
                     ),
                     SizedBox(height: 16.0),
                     Text(
-                      'Esporte Clube Flamengo',
+                      'De Resenha Sports Club ',
                       style: TextStyle(color: Colors.white, fontSize: 22.0),
                       textAlign: TextAlign.center,
                     ),
@@ -115,7 +115,7 @@ class _SocioScreenState extends State<SocioScreen> {
                 width: double.infinity,
                 height: 10.0,
                 decoration: BoxDecoration(
-                  color: Colors.red,
+                  color: Color.fromARGB(255, 64, 185, 8),
                   borderRadius: BorderRadius.vertical(bottom: Radius.circular(10.0)),
                 ),
               ),
@@ -145,10 +145,10 @@ class _SocioScreenState extends State<SocioScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 20, 19, 19),
+      backgroundColor: Color.fromARGB(255, 10, 49, 158),
       appBar: AppBar(
-        title: Text('Sócio'),
-        backgroundColor: Colors.black,
+        title: Text('Carteira'),
+        backgroundColor: Color.fromARGB(255, 10, 49, 158),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -176,7 +176,7 @@ class _SocioScreenState extends State<SocioScreen> {
                 ),
               ),
               style: ElevatedButton.styleFrom(
-                primary: Color.fromARGB(255, 200, 11, 11),
+                primary: Color.fromARGB(255, 64, 185, 8),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
@@ -184,7 +184,7 @@ class _SocioScreenState extends State<SocioScreen> {
             ),
             SizedBox(height: 16.0),
             Text(
-              'Carteira Digital do Sócio',
+              'Carteira Digital ',
               style: TextStyle(color: Colors.white, fontSize: 26.0),
             ),
             SizedBox(height: 16.0),

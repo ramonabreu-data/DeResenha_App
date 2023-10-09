@@ -79,8 +79,8 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(height: 14),
             Image.network(
               'https://ramondata.online/img/logoblue.png',
-              width: 120,
-              height: 120,
+              width: 130,
+              height: 130,
             ),
             SizedBox(height: 12),
             Text(
@@ -245,9 +245,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconSize: 30,
                 icon: Column(
                   children: [
-                    Icon(Icons.group),
+                    Icon(Icons.perm_contact_calendar),
                     Text(
-                      'Sócio',
+                      'Carteira',
                       style: TextStyle(fontSize: 12, color: Colors.white),
                     ),
                   ],
@@ -265,7 +265,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     MaterialPageRoute(builder: (context) => SocioScreen()),
                   );
                 },
-                tooltip: 'Sócio',
+                tooltip: 'Carteira',
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(0),
                 splashRadius: 1,
