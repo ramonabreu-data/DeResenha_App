@@ -181,7 +181,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 iconSize: 30,
                 icon: Column(
                   children: [
-                    Icon(Icons.sports_soccer),
+                    Icon(Icons.how_to_reg),
                     Text(
                       'Jogos',
                       style: TextStyle(fontSize: 12, color: Colors.white),
@@ -215,7 +215,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Icon(Icons.tv),
                     Text(
-                      'TV',
+                      'TV ES',
                       style: TextStyle(fontSize: 12, color: Colors.white),
                     ),
                   ],
@@ -228,12 +228,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     _selectedIndex = 3;
                   });
                   // Navegar para a página de TV (TvScreen)
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => TvScreen()),
-                  );
+                   // Abra o site https://www.youtube.com/@esportesdasorteoficial
+                     launch('https://www.youtube.com/@esportesdasorteoficial');
                 },
-                tooltip: 'TV',
+                tooltip: 'TV ES',
                 alignment: Alignment.center,
                 padding: EdgeInsets.all(0),
                 splashRadius: 1,
