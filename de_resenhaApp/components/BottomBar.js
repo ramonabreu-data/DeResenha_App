@@ -10,12 +10,12 @@ const BottomBar = () => {
         <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="check-square" size={25} color="#51d61c" />
-        <Text style={styles.buttonText}>check-in</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.button}>
         <Icon name="youtube-play" size={25} color="#51d61c" />
         <Text style={styles.buttonText}>TV ES</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.button}>
+        <Icon name="whatsapp" size={25} color="#51d61c" />
+        <Text style={styles.buttonText}>whatsapp</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
         <Icon name="address-card" size={25} color="#51d61c" />
