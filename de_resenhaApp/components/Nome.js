@@ -11,10 +11,10 @@ const Nome = () => {
 
 const styles = StyleSheet.create({
   nomeContainer: {
-    flex: 3,
+    flex: 4,
     justifyContent: 'flex-start', // Alinhar o título para a parte superior
     alignItems: 'center',
-    marginTop: 1, // Adicione um marginTop para mover o título mais para cima
+    marginTop: 10, // Adicione um marginTop para mover o título mais para cima
   },
   nomeText: {
     color: 'white',
