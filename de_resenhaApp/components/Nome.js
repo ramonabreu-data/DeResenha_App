@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     flex: 4,
     justifyContent: 'flex-start', // Alinhar o título para a parte superior
     alignItems: 'center',
-    marginTop: 10, // Adicione um marginTop para mover o título mais para cima
+    marginTop: 140, // Adicione um marginTop para mover o título mais para cima
   },
   nomeText: {
     color: 'white',

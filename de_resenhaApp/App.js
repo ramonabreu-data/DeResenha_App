@@ -1,22 +1,31 @@
 import React from 'react';
-import { View,title} from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import BottomBar from './components/BottomBar'; // Importe o componente
 import AppBar from './components/AppBar';
 import Logo from './components/Logo';
 import Nome from './components/Nome';
-
+import BottomGrid from './components/BottomGrid';
 
 const MainScreen = () => {
   return (
-    <View style={{ flex: 1,backgroundColor: '#2123c4' }}>
-      
-      <AppBar title="De Resenha SC"/>
-      <Logo /> 
-      {/* Adicione o componente BottomBar no final da tela */}
-      <BottomBar />
-      <Nome />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <AppBar title="De Resenha SC" />
+        <Logo />
+        <Nome />
+        <BottomGrid />
+        <BottomBar />
+      </View>
+    </NavigationContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#2123c4',
+  },
+});
 
 export default MainScreen;
