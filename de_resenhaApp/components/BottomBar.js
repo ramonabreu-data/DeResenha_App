@@ -6,19 +6,19 @@ const BottomBar = () => {
   return (
     <View style={styles.bottomBar}>
       <TouchableOpacity style={styles.button}>
-        <Icon name="home" size={30} color="white" />
+        <Icon name="home" size={25} color="#51d61c" />
         <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="check-square" size={30} color="white" />
+        <Icon name="check-square" size={25} color="#51d61c" />
         <Text style={styles.buttonText}>check-in</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="youtube-play" size={30} color="white" />
+        <Icon name="youtube-play" size={25} color="#51d61c" />
         <Text style={styles.buttonText}>TV ES</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="address-card" size={30} color="white" />
+        <Icon name="address-card" size={25} color="#51d61c" />
         <Text style={styles.buttonText}>Aluno</Text>
       </TouchableOpacity>
     </View>
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     height: 50, // Altura da barra
-    backgroundColor: '#141414', // Cor de fundo da barra
+    backgroundColor: '#0b0feb', // Cor de fundo da barra
     position: 'absolute', // Define a barra como absoluta na parte inferior
     bottom: 0, // Alinha a barra na parte inferior
     width: '100%', // Faz a barra ocupar toda a largura
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
+    color: '#51d61c',
   },
 });
 
