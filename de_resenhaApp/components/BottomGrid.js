@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginStart: 10,
     marginEnd: 10,
-    marginTop: -200,
+    marginTop: -170,
   },
   row: {
     flexDirection: 'row',
