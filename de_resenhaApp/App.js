@@ -6,6 +6,7 @@ import AppBar from './components/AppBar';
 import Logo from './components/Logo';
 import Nome from './components/Nome';
 import BottomGrid from './components/BottomGrid';
+import Banner from './components/Banner';
 
 const MainScreen = () => {
   return (
@@ -15,6 +16,7 @@ const MainScreen = () => {
         <Logo />
         <Nome />
         <BottomGrid />
+        <Banner />
         <BottomBar />
       </View>
     </NavigationContainer>
@@ -24,7 +26,7 @@ const MainScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2123c4',
+    backgroundColor: '#00309B',
   },
 });
 

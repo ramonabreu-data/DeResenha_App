@@ -6,19 +6,19 @@ const BottomBar = () => {
   return (
     <View style={styles.bottomBar}>
       <TouchableOpacity style={styles.button}>
-        <Icon name="home" size={25} color="#51d61c" />
+        <Icon name="home" size={25} color="#00E777" />
         <Text style={styles.buttonText}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="youtube-play" size={25} color="#51d61c" />
+        <Icon name="youtube-play" size={25} color="#00E777" />
         <Text style={styles.buttonText}>TV ES</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="whatsapp" size={25} color="#51d61c" />
+        <Icon name="whatsapp" size={25} color="#00E777" />
         <Text style={styles.buttonText}>whatsapp</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button}>
-        <Icon name="address-card" size={25} color="#51d61c" />
+        <Icon name="address-card" size={25} color="#00E777" />
         <Text style={styles.buttonText}>Aluno</Text>
       </TouchableOpacity>
     </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: '#51d61c',
+    color: '#00E777',
   },
 });
 

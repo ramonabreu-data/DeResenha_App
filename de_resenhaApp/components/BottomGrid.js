@@ -32,7 +32,7 @@ const BottomGrid = () => {
               <Icon
                 name={button.icon}
                 size={35}
-                color="#0b0feb"
+                color="#00309B"
                 style={styles.icon } // Usando style em vez de containerStyle
               />
               <Text style={styles.buttonText}>{button.title}</Text>
@@ -51,7 +51,7 @@ const BottomGrid = () => {
               <Icon
                 name={button.icon}
                 size={35}
-                color="#0b0feb"
+                color="#00309B"
                 style={styles.icon} // Usando style em vez de containerStyle
               />
               <Text style={styles.buttonText}>{button.title}</Text>
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     width: 110,
     height: 110,
     borderRadius: 80,
-    backgroundColor: '#51d61c',
+    backgroundColor: '#00E777',
     margin: 8,
     alignItems: 'center',
     justifyContent: 'center',
@@ -93,14 +93,14 @@ const styles = StyleSheet.create({
   icon: {
     width: 40,
     height: 40,
-    marginBottom: 1, // Metade do tamanho do ícone
+    marginBottom: 2, // Metade do tamanho do ícone
     backgroundColor: 'transparent',
     alignItems: 'center',
   },
   buttonText: {
     fontSize: 14,
    
-    color: '#0b0feb',
+    color: '#00309B',
     
   },
 });
