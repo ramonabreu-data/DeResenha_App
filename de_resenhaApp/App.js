@@ -6,7 +6,7 @@ import AppBar from './components/AppBar';
 
 const MainScreen = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1,backgroundColor: '#2123c4' }}>
       
       <AppBar title="De Resenha SC"/>
 
