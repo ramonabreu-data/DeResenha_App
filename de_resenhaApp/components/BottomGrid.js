@@ -31,7 +31,7 @@ const BottomGrid = () => {
             <View style={styles.buttonContent}>
               <Icon
                 name={button.icon}
-                size={35}
+                size={25}
                 color="#00309B"
                 style={styles.icon } // Usando style em vez de containerStyle
               />
@@ -50,7 +50,7 @@ const BottomGrid = () => {
             <View style={styles.buttonContent}>
               <Icon
                 name={button.icon}
-                size={35}
+                size={25}
                 color="#00309B"
                 style={styles.icon} // Usando style em vez de containerStyle
               />
@@ -65,40 +65,42 @@ const BottomGrid = () => {
 
 const styles = StyleSheet.create({
   grid: {
-    flex: 70,
+    flex: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    marginStart: 10,
-    marginEnd: 10,
-    marginTop: -170,
+    marginStart: 14,
+    marginEnd: 14,
+    marginTop: -180,
   },
   row: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginBottom: 10,
+    marginBottom: 8,
     marginVertical: 5,
   },
   button: {
-    width: 110,
-    height: 110,
-    borderRadius: 80,
+    width: 95,
+    height: 95,
+    borderRadius: 50,
     backgroundColor: '#00E777',
     margin: 8,
     alignItems: 'center',
     justifyContent: 'center',
+    
   },
   buttonContent: {
     alignItems: 'center',
+    justifyContent: 'center',
   },
   icon: {
-    width: 40,
+    width: 30,
     height: 40,
-    marginBottom: 2, // Metade do tamanho do ícone
+    marginBottom: 0, // Metade do tamanho do ícone
     backgroundColor: 'transparent',
-    alignItems: 'center',
+   
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 12,
    
     color: '#00309B',
     
