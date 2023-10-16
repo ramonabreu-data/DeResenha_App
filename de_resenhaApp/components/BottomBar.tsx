@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     height: 50, // Altura da barra
-    backgroundColor: '#0b0feb', // Cor de fundo da barra
+    backgroundColor: '#0F1768', // Cor de fundo da barra
     position: 'absolute', // Define a barra como absoluta na parte inferior
     bottom: 0, // Alinha a barra na parte inferior
     width: '100%', // Faz a barra ocupar toda a largura

@@ -26,7 +26,7 @@ const MainScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2123c4',
+    backgroundColor: '#00309B',
   },
 });
 

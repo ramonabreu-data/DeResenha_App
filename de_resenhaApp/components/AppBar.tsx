@@ -11,7 +11,7 @@ const AppBar = ({ title }) => {
 
 const styles = StyleSheet.create({
   appBar: {
-    backgroundColor: '#0b0feb',
+    backgroundColor: '#0F1768',
     padding: 20,
     paddingTop: 45
     ,

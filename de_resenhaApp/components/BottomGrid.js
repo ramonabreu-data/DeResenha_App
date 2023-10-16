@@ -1,23 +1,22 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome'; // Importe os ícones do FontAwesome
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 
-{/* Ver depois como refatorar para tsx */}
 const BottomGrid = () => {
   const navigation = useNavigation();
 
-  const openLink = (url) => {
-    navigation.navigate('WebView', { uri: url });
+  const openScreen = (screenName) => {
+    navigation.navigate(screenName);
   };
 
   const buttons = [
-    { title: 'Complexo', icon: 'university', url: 'https://www.google.com' },
-    { title: 'Soccer School', icon: 'futbol-o', url: 'https://www.google.com' },
-    { title: 'Agendamento', icon: 'calendar-plus-o', url: 'https://www.google.com' },
-    { title: 'Empresas Parceiras', icon: 'thumbs-up', url: 'https://www.google.com' },
-    { title: 'Localização', icon: 'map-signs', url: 'https://www.google.com' },
-    { title: 'Redes', icon: 'share-alt', url: 'https://www.google.com' },
+    { title: 'Complexo', icon: 'university', screen: 'ComplexScreen' },
+    { title: 'Soccer School', icon: 'futbol-o', screen: 'SoccerSchoolScreen' },
+    { title: 'Agendamento', icon: 'calendar-plus-o', screen: 'AgendamentoScreen' },
+    { title: 'Resenha FC', icon: 'users', screen: 'EmpresasParceirasScreen' },
+    { title: 'Localização', icon: 'map-signs',  },
+    { title: 'Redes', icon: 'share-alt',   },
   ];
 
   return (
@@ -27,14 +26,20 @@ const BottomGrid = () => {
           <TouchableOpacity
             key={index}
             style={styles.button}
-            onPress={() => openLink(button.url)}
+            onPress={() => {
+              if (button.screen) {
+                openScreen(button.screen);
+              } else if (button.url) {
+                // Adicione a lógica para abrir links externos aqui
+              }
+            }}
           >
             <View style={styles.buttonContent}>
               <Icon
                 name={button.icon}
                 size={25}
                 color="#00309B"
-                style={styles.icon } // Usando style em vez de containerStyle
+                style={styles.icon}
               />
               <Text style={styles.buttonText}>{button.title}</Text>
             </View>
@@ -46,14 +51,20 @@ const BottomGrid = () => {
           <TouchableOpacity
             key={index + 3}
             style={styles.button}
-            onPress={() => openLink(button.url)}
+            onPress={() => {
+              if (button.screen) {
+                openScreen(button.screen);
+              } else if (button.url) {
+                // Adicione a lógica para abrir links externos aqui
+              }
+            }}
           >
             <View style={styles.buttonContent}>
               <Icon
                 name={button.icon}
                 size={25}
                 color="#00309B"
-                style={styles.icon} // Usando style em vez de containerStyle
+                style={styles.icon}
               />
               <Text style={styles.buttonText}>{button.title}</Text>
             </View>
@@ -87,7 +98,6 @@ const styles = StyleSheet.create({
     margin: 8,
     alignItems: 'center',
     justifyContent: 'center',
-    
   },
   buttonContent: {
     alignItems: 'center',
@@ -96,15 +106,12 @@ const styles = StyleSheet.create({
   icon: {
     width: 30,
     height: 40,
-    marginBottom: 0, // Metade do tamanho do ícone
+    marginBottom: 0,
     backgroundColor: 'transparent',
-   
   },
   buttonText: {
     fontSize: 12,
-   
     color: '#00309B',
-    
   },
 });
 
