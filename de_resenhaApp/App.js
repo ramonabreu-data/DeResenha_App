@@ -16,7 +16,7 @@ const MainScreen = () => {
         <Logo />
         <Nome />
         <BottomGrid />
-        <Banner />
+        <Banner></Banner>
         <BottomBar />
       </View>
     </NavigationContainer>
@@ -26,7 +26,7 @@ const MainScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00309B',
+    backgroundColor: '#2123c4',
   },
 });
 

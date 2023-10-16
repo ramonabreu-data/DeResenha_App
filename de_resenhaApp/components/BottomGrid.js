@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'; // Importe os ícones do FontAwesome
 import { useNavigation } from '@react-navigation/native';
 
+{/* Ver depois como refatorar para tsx */}
 const BottomGrid = () => {
   const navigation = useNavigation();
 
